@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel eSIM Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+
+        <div>
+            <h1>Travel eSIM Dashboard</h1>
+            <p id="today"></p>
+        </div>
+
+   <button class="download-btn" onclick="downloadCSV()">
+    Download CSV
+</button>
+
+    </header>
+
+
+  <section class="cards">
+
+    <div class="card">
+        <div class="card-icon">📦</div>
+        <span>Today's Orders</span>
+        <h2 id="todayOrders">--</h2>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">💰</div>
+        <span>Today's Revenue</span>
+        <h2 id="todayRevenue">--</h2>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">📅</div>
+        <span>Monthly Orders</span>
+        <h2 id="monthlyOrders">--</h2>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">📈</div>
+        <span>Monthly Revenue</span>
+        <h2 id="monthlyRevenue">--</h2>
+    </div>
+
+</section>
+
+
+    <section class="middle">
+
+        <div class="leaderboard">
+
+            <h2>Leaderboard</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Orders</th>
+                    <th>Revenue</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="leaderboardBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <h2>Top Destinations</h2>
+
+            <div id="destinationList">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="charts">
+
+        <div class="chart-card">
+
+            <h2>Daily Revenue</h2>
+
+            <canvas id="dailyChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h2>Monthly Revenue</h2>
+
+            <canvas id="monthlyChart"></canvas>
+
+        </div>
+
+    </section>
+
+</div>
+<footer class="footer">
+    <p>Developed by Harshit Dubey © 2026</p>
+</footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
